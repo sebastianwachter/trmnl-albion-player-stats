@@ -1,0 +1,38 @@
+---
+strategy: polling
+no_screen_padding: 'no'
+dark_mode: 'no'
+static_data: ''
+polling_verb: get
+polling_url: |
+  {{ server_region }}search?q={{ user_name }}
+  {{ server_region }}players/{{ user_id }}
+polling_headers: ''
+name: Albion Player Stats
+refresh_interval: 60
+custom_fields:
+  - keyname: bio
+    name: About This Plugin
+    category: games,productivity
+    field_type: author_bio
+    description: |
+      Display an Albion Online player's fame amount across multiple categories
+      (Kill, Death, PvE, Crafting, Gathering, Fishing) on your TRMNL.
+    github_url: 'https://github.com/sebastianwachter/trmnl-albion-player-stats'
+  - keyname: server_region
+    field_type: select
+    options:
+      - Americas: 'https://gameinfo.albiononline.com/api/gameinfo/'
+      - Asia: 'https://gameinfo-sgp.albiononline.com/api/gameinfo/'
+      - Europe: 'https://gameinfo-ams.albiononline.com/api/gameinfo/'
+    default: 'https://gameinfo-ams.albiononline.com/api/gameinfo/'
+    name: 'Albion Server Region'
+    description: 'The server region of the player'
+  - keyname: user_name
+    field_type: string
+    name: 'User Name'
+    description: 'The name of the player'
+  - keyname: user_id
+    field_type: string
+    name: 'User ID'
+    description: 'The ID of the player'

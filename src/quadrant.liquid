@@ -1,0 +1,82 @@
+<div class="layout layout--col gap--space-between">
+  <div class="grid">
+    <div class="item">
+      <div class="meta"></div>
+      <div class="content">
+        <span class="value value--small">{{ IDX_1.Name }}</span>
+        <span class="label">
+          {% unless IDX_1.AllianceName == "" %}
+            [{{ IDX_1.AllianceName }}]
+          {% endunless %}
+          {% unless IDX_1.GuildName == "" %}
+            {{ IDX_1.GuildName }}
+          {% endunless %}
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="grid">
+    <div class="col gap--medium">
+      <div class="item">
+        <div class="meta"></div>
+        <div class="content">
+          <span class="value value--small value--tnums" data-value-fit="true" data-value-format="true">{{ IDX_1.KillFame }}</span>
+          <span class="label">Kill</span>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="item">
+        <div class="meta"></div>
+        <div class="content">
+          <span class="value value--small value--tnums" data-value-fit="true" data-value-format="true">{{ IDX_1.DeathFame }}</span>
+          <span class="label">Death</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col gap--medium">
+      <div class="item">
+        <div class="meta"></div>
+        <div class="content">
+          <span class="value value--small value--tnums" data-value-fit="true" data-value-format="true">{{ IDX_1.LifetimeStatistics.PvE.Total }}</span>
+          <span class="label">PvE</span>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="item">
+        <div class="meta"></div>
+        <div class="content">
+          <span class="value value--small value--tnums" data-value-fit="true" data-value-format="true">{{ IDX_1.LifetimeStatistics.Crafting.Royal | plus: IDX_1.LifetimeStatistics.Crafting.Total | plus: IDX_1.LifetimeStatistics.Crafting.Avalon | plus: IDX_1.LifetimeStatistics.Crafting.Outlands }}</span>
+          <span class="label">Crafting</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col gap--medium">
+      <div class="item">
+        <div class="meta"></div>
+        <div class="content">
+          <span class="value value--small value--tnums" data-value-fit="true" data-value-format="true">{{ IDX_1.LifetimeStatistics.Gathering.All.Royal | plus: IDX_1.LifetimeStatistics.Gathering.All.Total | plus: IDX_1.LifetimeStatistics.Gathering.All.Avalon  | plus: IDX_1.LifetimeStatistics.Gathering.All.Outlands }}</span>
+          <span class="label">Gathering</span>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="item">
+        <div class="meta"></div>
+        <div class="content">
+          <span class="value value--small value--tnums" data-value-fit="true" data-value-format="true">{{ IDX_1.LifetimeStatistics.FishingFame }}</span>
+          <span class="label">Fishing</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

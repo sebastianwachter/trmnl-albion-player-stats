@@ -1,0 +1,11 @@
+---
+watch:
+  - src
+  - .trmnlp.yml
+
+custom_fields:
+  server_region: "https://gameinfo-ams.albiononline.com/api/gameinfo/"
+  user_name: "Koldodler"
+  user_id: "rz3NTNhgSviN7TppdHB0LA"
+
+time_zone: Arctic/Longyearbyen
